@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8ff;
+    color: #222;
+    line-height: 1.7;
+}
+
+
+/* NAVBAR */
+
+header {
+    background: #082567;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #66e3ff;
+}
+
+
+/* HOME */
+
+.hero {
+    min-height: 90vh;
+    padding: 70px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(135deg, #e7f0ff, #ffffff);
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #1769aa;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.hero h1 span {
+    color: #1769aa;
+}
+
+.hero h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.profile {
+    margin-left: 30px;
+}
+
+.profile img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+
+/* BUTTON */
+
+.buttons {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+    margin: 8px;
+
+    background: #1769aa;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0b4d82;
+}
+
+.btn.second {
+    background: #333;
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+.title {
+    text-align: center;
+    color: #082567;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+
+/* ABOUT */
+
+.about-box {
+    background: white;
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about-box p {
+    margin-bottom: 18px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+}
+
+.card,
+.project-card,
+.education-box {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3,
+.project-card h3 {
+    color: #1769aa;
+    margin-bottom: 12px;
+}
+
+
+/* PROJECT */
+
+.project-card span {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 6px 14px;
+
+    background: #e4f2ff;
+
+    color: #1769aa;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+
+/* EDUCATION */
+
+.education-box {
+    text-align: center;
+}
+
+.education-box h3 {
+    color: #1769aa;
+    margin-bottom: 12px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    margin: 25px 0;
+}
+
+.contact-info p {
+    margin: 8px;
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #082567;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 15px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .profile {
+        margin: 0 0 30px;
+    }
+
+    .profile img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .section {
+        padding: 55px 20px;
+    }
+}
